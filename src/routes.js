@@ -1,13 +1,15 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import ProgramBuilderPage from './containers/ProgramBuilderPage.js';
+import ProgramPage from './containers/ProgramPage.js';
+import HomePage from './containers/HomePage.js';
 import App from './components/App.js';
 import NotFoundPage from './components/NotFoundPage.js';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={ProgramBuilderPage} />
+    <IndexRoute component={HomePage} />
+    <Route path="program-page/:id" component={ProgramPage} />
     <Route path="*" component={NotFoundPage} />
   </Route>
 );

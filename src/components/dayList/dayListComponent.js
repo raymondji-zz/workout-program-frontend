@@ -1,13 +1,13 @@
 import React from 'react';
 
-const dayListComponent = React.createClass({
+const DayListComponent = React.createClass({
 	render() {
 		return (
 			<div>
-				<h1>TEST</h1>
+				<h1>DayListComponent</h1>
 			</div>
 		);
 	}
 })
 
-export default dayListComponent;
+export default DayListComponent;

@@ -1,22 +1,22 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
-import dayListComponent from './dayList/dayListComponent.js';
 
-const App = React.createClass({
+class App extends React.Component {
   render() {
     return (
-    	<div>
-    		<h1> Hello World. </h1>
-    		<dayListComponent />
-    	</div>
-    	// <div>
-    	// 	<h1>TEST</h1>
-     	//    </div>
-        // <ul role="nav">
-        //   <li><Link to="/test">test</Link></li>
-        // </ul>
-    )
+      <div>
+        <IndexLink to="/">Home</IndexLink>
+        {' | '}
+        <Link to="/program-page/1">Program</Link>
+        <br/>
+        {this.props.children}
+      </div>
+    );
   }
-})
+}
+
+App.propTypes = {
+  children: PropTypes.element
+};
 
 export default App;
